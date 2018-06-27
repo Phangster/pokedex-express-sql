@@ -5,6 +5,7 @@ class Home extends React.Component {
     return (
       <html>
         <head />
+        <link rel="stylesheet" type="text/css" href="./public/css/Home.css"/>
         <body>
           <h1>Welcome to Pokedex</h1>
           <ul>

@@ -10,8 +10,7 @@ class Edit extends React.Component {
           <form
             className="pokemon-form"
             method="POST"
-            action={"/pokemons/edit/"+ this.props.pokemon.id + "?_method=PUT"}
-          >
+            action={"/pokemon/"+ this.props.pokemon.id + "/edit?_method=PUT"}>
             <div className="pokemon-attribute">
               id:<input name="id" type="text" defaultValue={this.props.pokemon.id} />
             </div>
@@ -50,42 +49,16 @@ class Edit extends React.Component {
                 defaultValue={this.props.pokemon.weight}
               />
             </div>
-            <div className="pokemon-attribute">
-              candy:<input
-                name="candy"
-                type="text"
-                defaultValue={this.props.pokemon.candy}
-              />
-            </div>
-            <div className="pokemon-attribute">
-              candy_count:<input
-                name="candy_count"
-                type="text"
-                defaultValue={this.props.pokemon.candy_count}
-              />
-            </div>
-            <div className="pokemon-attribute">
-              egg:<input
-                name="egg"
-                type="text"
-                defaultValue={this.props.pokemon.egg}
-              />
-            </div>
-            <div className="pokemon-attribute">
-              avg_spawns:<input
-                name="avg_spawns"
-                type="text"
-                defaultValue={this.props.pokemon.avg_spawns}
-              />
-            </div>
-            <div className="pokemon-attribute">
-              spawn_time:<input
-                name="spawn_time"
-                type="text"
-                defaultValue={this.props.pokemon.spawn_time}
-              />
-            </div>
             <input name="submit" type="submit" />
+          </form>
+
+          <form
+            className="pokemon-form"
+            method="POST"
+            action={"/pokemon/"+ this.props.pokemon.id + "/edit?_method=DELETE"}>
+            <div className="delete-button">
+              <button name="delete" type="Delete">Delete</button>
+            </div>
           </form>
         </body>
       </html>
